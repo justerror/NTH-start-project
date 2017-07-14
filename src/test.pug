@@ -1,0 +1,18 @@
+include ../node_modules/bemto.pug/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+
+
+| Don't
+|
+button#self-destruct touch
+|
+| me!
+
+
+
++b.block--bar
+  +e.element-1 Foo
+  +b.block-2
+    +e.A(href="#bar").element Bar
+  +e.element-2--foo Baz

@@ -275,6 +275,32 @@ gulp.task('sprite:png', function (callback) {
   }
 });
 
+// Сборка HTML из pug
+gulp.task('pug', function() {
+  const pug = require('gulp-pug');
+  const htmlbeautify = require('gulp-html-beautify');
+  console.log('---------- сборка HTML из pug');
+  return gulp.src(dirs.srcPath + '/*.pug')
+    .pipe(plumber({
+      errorHandler: function(err) {
+        notify.onError({
+          title: 'Pug compilation error',
+          message: err.message
+        })(err);
+        this.emit('end');
+      }
+    }))
+    .pipe(pug({
+      doctype: 'html',
+      // pretty: true, // подключен и использован gulp-html-beautify
+    }))
+    .pipe(htmlbeautify({
+      "indent_size": 2,
+      "end_with_newline": true
+    }))
+    .pipe(gulp.dest(dirs.buildPath));
+});
+
 // Сборка HTML
 gulp.task('html', function() {
   const fileinclude = require('gulp-file-include');
