@@ -1,15 +1,23 @@
 {
   "name": "NTH-start-project",
   "version": "1.1.0",
-  "description": "Start a library of blocks and technical solutions for HTML/CSS/js page layout.",
+  "description":
+    "Start a library of blocks and technical solutions for HTML/CSS/js page layout.",
   "scripts": {
     "test": "stylelint \"src/**/*.less\"",
     "start": "gulp",
-    "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/gulp build && cross-env ./node_modules/.bin/gulp deploy",
+    "deploy":
+      "cross-env NODE_ENV=production ./node_modules/.bin/gulp build && cross-env ./node_modules/.bin/gulp deploy",
     "build": "cross-env NODE_ENV=production npm start build",
     "precommit": "npm test"
   },
   "author": "Nikolay Gromov",
+  "contributors": [
+    {
+      "name": "Ruslan Tursunov",
+      "email": "justeppop@gmail.com"
+    }
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",

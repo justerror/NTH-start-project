@@ -24,10 +24,10 @@
     "font-family-name-quotes": ["always-where-recommended", {
       "message": "В кавычки шрифта название брать следует"
     }],
-    "font-weight-notation": ["numeric", {
-      "message": "Плотность — цифрой: https://goo.gl/58eKi7",
-      ignore: ["relative"]
-    }],
+    # "font-weight-notation": ["numeric", {
+    #   "message": "Плотность — цифрой: https://goo.gl/58eKi7",
+    #   ignore: ["relative"]
+    # }],
     # "function-blacklist": [["scale", "rgba", "linear-gradient"], {
     #   "message": "Запрещено функцию эту использовать."
     # }],
@@ -228,7 +228,7 @@
     "selector-combinator-space-before": ["always", {
       "message": "Перед комбинатором в селекторе пробел нужен"
     }],
-    "selector-no-id": [true, {
+    "selector-max-id": [0, {
       "message": "По ID джедай стилизовать не должен",
       # "severity": "warning"
     }],

@@ -66,7 +66,7 @@ textarea {
 html {
   box-sizing: border-box;
   font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 1);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-overflow-style: scrollbar;
   -ms-text-size-adjust: 100%; /* stylelint-disable-line  property-no-vendor-prefix */
   min-width: 320px;
@@ -328,4 +328,35 @@ pre {
   border: 1px solid @gray-lighter;
   white-space: normal;
   tab-size: 2;
+}
+
+
+// Remove the default vertical scrollbar in IE 10+.
+textarea {
+  overflow: auto;
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; // Correct the inability to style clickable types in iOS and Safari.
+  font: inherit; // Change font properties to `inherit` in Safari.
+}
+
+// Add the correct display in IE 10.
+[hidden] {
+  display: none;
+}
+
+template {
+  display: none;
+}
+
+//  Add the correct vertical alignment in Chrome, Firefox, and Opera.
+progress {
+  vertical-align: baseline;
 }
